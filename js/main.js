@@ -25,7 +25,6 @@ const arrows_disappear = gsap.timeline({scrollTrigger:{
         scrub: true,
         start: "-=80",
         end:"+=450",
-        markers: true
     }})
 arrows_disappear
 .to('.b-5', {y:'200%', duration:0.4})
@@ -41,7 +40,6 @@ const road = gsap.timeline({scrollTrigger:{
     scrub: true,
     start: "+=50",
     end:"bottom top",
-    markers: true
 }})
 road
     .from('#vertical_first1', {y:'-14vh', duration:0.15, ease:'power2.in'})
@@ -66,7 +64,6 @@ const rs1 = gsap.timeline({scrollTrigger:{
         scrub: true,
         start: "+=550",
         end:"bottom bottom",
-        markers: true
     }})
 rs1
     .from('#road-slide1', {z:'-325px', opacity: 0, delay:0.2, duration:0.5, ease:'power2.in'})
@@ -76,4 +73,24 @@ rs1
     .from('#road-slide3', {z:'-325px', opacity: 0, delay:0, duration:0.5, ease:'power2.in'})
     .to('#road-slide3', {z:'100px', opacity: 0, delay:0.5, duration:0.5, ease:'power2.in'})
     .from('#road-slide4', {z:'-325px', opacity: 0, delay:0, duration:0.5, ease:'power2.in'})
+
+
+
+$(".nostroke").each(function() {
+    // Content Reveal Animation
+    ScrollTrigger.create({
+      trigger: ".nostroke",
+      start: "top 80%",
+      end: "bottom 100px",
+      onEnter: () => $(this).removeClass('nostroke'),
+    });
+  });
+
+
+const futureSun = gsap.timeline({scrollTrigger:{
+        trigger:"#future",
+        start: "top 30%",
+    }})
+futureSun
+    .from('#sun', {y:'30%', opacity: 0, delay:0.2, duration:1.8, ease:'power1.in'})
 
