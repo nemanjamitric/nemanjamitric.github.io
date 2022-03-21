@@ -436,3 +436,7 @@ a:hover {
   right: 0;
   bottom: -16.5vw;
 }
+.future-text {
+  font-size: 28px;
+  text-align: center;
+}
