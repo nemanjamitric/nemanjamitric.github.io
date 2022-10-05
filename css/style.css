@@ -440,3 +440,23 @@ a:hover {
   font-size: 28px;
   text-align: center;
 }
+.contact-text {
+  font-size: 28px;
+  text-align: left;
+  width: 100%;
+}
+.contact-container {
+  border-width: 3px;
+  border-color: #000;
+  border-style: solid;
+}
+.contact-container-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 100%;
+}
+.contact-link{
+  color: rgb(0, 0, 77);
+}
