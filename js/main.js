@@ -66,13 +66,13 @@ const rs1 = gsap.timeline({scrollTrigger:{
         end:"bottom bottom",
     }})
 rs1
-    .from('#road-slide1', {z:'-325px', opacity: 0, delay:0.2, duration:0.5, ease:'power2.in'})
-    .to('#road-slide1', {z:'100px', opacity: 0, delay:0.5, duration:0.5, ease:'power2.in'})
-    .from('#road-slide2', {z:'-325px', opacity: 0, delay:0, duration:0.5, ease:'power2.in'})
-    .to('#road-slide2', {z:'100px', opacity: 0, delay:0.5, duration:0.5, ease:'power2.in'})
-    .from('#road-slide3', {z:'-325px', opacity: 0, delay:0, duration:0.5, ease:'power2.in'})
-    .to('#road-slide3', {z:'100px', opacity: 0, delay:0.5, duration:0.5, ease:'power2.in'})
-    .from('#road-slide4', {z:'-325px', opacity: 0, delay:0, duration:0.5, ease:'power2.in'})
+    .from('#road-slide1', {z:'-325px', autoAlpha: 0, delay:0.2, duration:0.5, ease:'power2.in'})
+    .to('#road-slide1', {z:'100px', autoAlpha: 0, delay:0.5, duration:0.5, ease:'power2.in', onComplete: () => hideElement('#road-slide1') })
+    .from('#road-slide2', {z:'-325px', autoAlpha: 0, delay:0, duration:0.5, ease:'power2.in'})
+    .to('#road-slide2', {z:'100px', autoAlpha: 0, delay:0.5, duration:0.5, ease:'power2.in', onComplete: () => hideElement('#road-slide2') })
+    .from('#road-slide3', {z:'-325px', autoAlpha: 0, delay:0, duration:0.5, ease:'power2.in'})
+    .to('#road-slide3', {z:'100px', autoAlpha: 0, delay:0.5, duration:0.5, ease:'power2.in', onComplete: () => hideElement('#road-slide3') })
+    .from('#road-slide4', {z:'-325px', autoAlpha: 0, delay:0, duration:0.5, ease:'power2.in'})
 
 
 
